@@ -1,3 +1,4 @@
+# from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 # from django.core.exceptions import ObjectDoesNotExist
@@ -12,6 +13,7 @@ from django.views import generic
 from .models import Question, Choice
 
 
+# @login_required
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
